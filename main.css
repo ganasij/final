@@ -1,0 +1,112 @@
+body {
+  font-family: "Pretendard Variable", sans-serif;
+  background-color: #EEE;
+  line-height: 1; /*줄높이*/
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column; /*수직 정렬*/
+  align-items: center; /*교차 축 정렬*/
+  gap: 20px;
+  background-image: url("https://heropy.blog/css/images/pattern.png");
+}
+
+.form {
+  box-sizing: border-box;
+  background-color: #FFF;
+  width: 400px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.07);
+  border-radius: 6px;
+  padding: 30px 20px;
+}
+.form p {
+  letter-spacing: -1px; /*font 자간*/
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.form .inputbox {
+  display: flex;
+  flex-direction: column; /*수직 정렬*/
+  gap: 10px; /*display: flex; 입력해야만 gap 적용됌*/
+}
+
+.form .inputbox input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: 1px solid #777;
+}
+.form .btn {
+  cursor: pointer;
+  background-color: #FFA32D;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 700;
+  width: 200px;
+  height: 40px;
+  border-radius: 6px;
+  text-decoration: none; /*밑줄제거*/
+  margin: 24px auto 0px auto;
+  display: flex; /*btn text flex 정렬*/
+  justify-content: center; /*주 축 정렬*/
+  align-items: center; /*교차 축 정렬*/
+  box-shadow: 0 8px 0 #ff8b2d;
+  transition: 0.1; /*전환효과*/
+}
+.form .btn:hover {
+  background-color: #ffb049;
+}
+.form .btn:active {
+  box-shadow: 0 6px 0 #ff8b2d;  
+  transform: translateY(2px); /*변환효과*/
+}
+
+.card {
+  display: none; /*.card 숨김*/
+  box-sizing: border-box;
+  background-color: #FFF;
+  width: 400px;
+  height: 240px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.07);
+  flex-direction: row;
+  gap: 18px;
+}
+.card.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ /* display: block; 
+☞.show 클래스가 추가되었을 때 .card 요소가 보이도록 설정
+☞ block 적용하면 flex-direction 에러.. why? */
+}
+.card .photo {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0; /*기본값: 1; 아이템 자동 축소 방지*/
+}
+.card .text .name {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 4px; /*font 자간*/
+  margin-left: -4px;
+  margin-bottom: 16px;
+}
+.card .text .title,
+.card .text .phone,
+.card .text .email {
+  letter-spacing: -1px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.card .text .material-symbols-outlined {
+  background-color: #FFA32D;
+  color: #FFF;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-right: 8px;
+  padding: 2px;
+}
